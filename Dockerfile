@@ -16,7 +16,7 @@ FROM alpine:3.6
 
 WORKDIR /opt
 
-RUN apk add --update --no-cache ca-certificates
+RUN apk add --update --no-cache ca-certificates git openssl
 
 COPY --from=build /usr/local/bin/kubectl /usr/local/bin/kubectl
 COPY --from=build /usr/local/bin/helm /usr/local/bin/helm
