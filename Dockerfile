@@ -1,4 +1,4 @@
-FROM alpine:3.6 as build
+FROM alpine:3.9 as build
 
 # Note: Latest version of helm may be found at:
 # https://github.com/kubernetes/helm/releases
@@ -12,7 +12,7 @@ RUN apk add --no-cache curl \
     && mv linux-amd64/helm /usr/local/bin/helm \
     && chmod +x /usr/local/bin/helm
     
-FROM alpine:3.6
+FROM alpine:3.9
 
 WORKDIR /opt
 
